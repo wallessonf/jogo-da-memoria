@@ -65,7 +65,7 @@ h1 {
 }
 
 .front {
-  color:black;
+  color: #0aff2b;
   font-size: 5em;
   background-color: #0288D1;
   transform: rotateY(0deg);
