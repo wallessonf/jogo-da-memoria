@@ -127,7 +127,7 @@ img {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     padding: 1.5em;
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 
