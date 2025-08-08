@@ -37,6 +37,8 @@ embaralhada.forEach((carta) => {
 
 const classCarta = document.querySelectorAll(".card");
 const pontos = document.getElementById("pontos")
+pontos.innerHTML = `${pontuacao}`;
+
 
 let cartasAbertas = [];
 let bloqueado = false;
@@ -59,7 +61,7 @@ function abrir() {
             card.classList.remove("errou");
           });
           pontuacao += 10;
-          pontos.innerHTML = `Pontos: ${pontuacao}`;
+          pontos.innerHTML = `${pontuacao}`;
           console.log(pontuacao)
         }
 
