@@ -21,6 +21,7 @@ h1 {
   margin-bottom: 1em;
 }
 
+
 .game-board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -30,7 +31,12 @@ h1 {
   height: 60%;
   border: solid 1px;
   border-radius: 20px;
-  max-width: 1050px
+  max-width: 1600px
+}
+
+p{
+  font-size: 2em;
+  margin-bottom: 1em;
 }
 
 .card {
@@ -118,17 +124,24 @@ img {
 }
 
 @media (max-width: 430px) {
+  body {
+  justify-content: start;
+}
   h1 {
+    margin-top: 1em;
     font-size: 2em;
-    text-align: center;
   }
 
   .game-board {
     grid-template-columns: repeat(2, 1fr);
     gap: 1em;
     padding: 1.5em;
-    width: 90%;
+    width: 70%;
     height: auto;
+  }
+
+  p{
+    margin: 0;
   }
 
   .front {

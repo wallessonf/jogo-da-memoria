@@ -1,3 +1,5 @@
+"use strict";
+
 const cartas = [
   { id: 1, imagem: "maca.png" },
   { id: 2, imagem: "laranja.png" },
@@ -9,6 +11,8 @@ const cartas = [
   { id: 4, imagem: "banana.png" },
 ];
 
+let pontuacao = 0;
+
 function embaralharCartas(cartas) {
   for (let i = cartas.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -17,7 +21,7 @@ function embaralharCartas(cartas) {
   return cartas;
 }
 
-let embaralhada = embaralharCartas(cartas);
+const embaralhada = embaralharCartas(cartas);
 
 embaralhada.forEach((carta) => {
   const div = document.createElement("div");
@@ -32,6 +36,7 @@ embaralhada.forEach((carta) => {
 });
 
 const classCarta = document.querySelectorAll(".card");
+const pontos = document.getElementById("pontos")
 
 let cartasAbertas = [];
 let bloqueado = false;
@@ -53,6 +58,9 @@ function abrir() {
           document.querySelectorAll(".flipped").forEach((card) => {
             card.classList.remove("errou");
           });
+          pontuacao += 10;
+          pontos.innerHTML = `Pontos: ${pontuacao}`;
+          console.log(pontuacao)
         }
 
         setTimeout(() => {
@@ -61,10 +69,14 @@ function abrir() {
           });
           cartasAbertas = [];
             bloqueado = false;
-        }, 5000);
+        }, 1000);
       }
     });
   });
 }
 
+
+
 abrir();
+
+
